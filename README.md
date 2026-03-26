@@ -1,5 +1,6 @@
 # 🔥 ReconPulse — Web Reconnaissance & Vulnerability Insights Dashboard
 
+<p align="center">
 <img width="612" height="408" alt="reconpulse" src="https://github.com/user-attachments/assets/dd54ed19-b46e-42d4-b416-2eaaf25894b1" />
 
 
