@@ -1,0 +1,29 @@
+# ReconPulse authorization file -- REQUIRED for active mode.
+# Copy to authorization.yaml (which is git-ignored) and fill in real values.
+# Active mode refuses to run unless this file is valid and in date.
+engagement: "Example Bug Bounty Program - https://example.com/program"
+authorized_by: "Jane Doe <security@example.com>"
+valid_from: "2026-01-01T00:00:00Z"
+valid_until: "2026-12-31T23:59:59Z"
+scope:
+  in:
+    - example.com
+    - "*.example.com"
+  out:
+    - internal.example.com
+allowed_techniques:
+  - dns_enum
+  - tls_check
+  - http_methods
+  - cors_probe
+  - common_paths
+limits:
+  max_requests_per_second: 1.0
+  max_concurrency: 3
+  max_total_requests: 500
+  per_host_requests: 200
+  operational_hours: "09:00-18:00 Asia/Jakarta"
+testing_window: "2026-01-01T00:00:00Z/2026-12-31T23:59:59Z"
+contact_for_incident: "security@example.com"
+# Optional: domain you control, used by the open-redirect check.
+canary_domain: "canary.example.net"
