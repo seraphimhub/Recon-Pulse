@@ -186,7 +186,11 @@ def main() -> None:
     scope_entries = [item.strip() for item in scope_text.split(",") if item.strip()]
 
     if mode == "active" and authorization is not None:
-        plan = dry_run_plan(target, authorization, techniques)
+        try:
+            plan = dry_run_plan(target, authorization, techniques)
+        except (AuthorizationError, ReconPulseError) as exc:
+            st.error(f"Authorization refused: {exc}")
+            return
         with st.expander("Planned requests (dry run)", expanded=False):
             st.json(plan)
 
