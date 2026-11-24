@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.env
+.env.*
+
+# Tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# ReconPulse: never commit real authorization, evidence, or scan output
+authorization.yaml
+authorization.yml
+reconpulse-output/
+reconpulse_audit*.jsonl
+audit*.jsonl
+*.sarif
+reconpulse_*.json
+reconpulse_*.csv
+reconpulse_*.md
+reconpulse_*.html
+targets.txt
